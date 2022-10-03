@@ -4,7 +4,6 @@
 "use strict"; // 厳格モード
 
 import * as THREE from 'three';
-import { MeshBasicMaterial, MeshLambertMaterial } from 'three';
 
 // ３Ｄページ作成関数の定義
 function init() {
@@ -18,7 +17,7 @@ function init() {
   // 箱1の表示設定
   const box1 = new THREE.Mesh(
     new THREE.BoxGeometry(10, 2, 10),
-    new MeshBasicMaterial({color: "lightblue"})
+    new THREE.MeshBasicMaterial({color: "lightblue"})
   );
   scene.add(box);
 
