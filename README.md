@@ -5,7 +5,7 @@
 
 1. クローンしたローカルリポジトリをVisual Studio Code(以下，VS Code) で開く
 
-1. VS Code の Live Server を使って，表示を確認する．(座標軸だけが表示される)
+1. VS Code の Live Server を使って，表示を確認する．(初期コードにはエラーがある)
 
 1. ap0201.js を修正して，図のように表示されるようにする．
 
