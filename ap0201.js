@@ -1,9 +1,10 @@
 //
-// 応用プログラミング 第1回 課題2
+// 応用プログラミング 第2回 課題1
 //
 "use strict"; // 厳格モード
 
 import * as THREE from 'three';
+import { MeshBasicMaterial, MeshLambertMaterial } from 'three';
 
 // ３Ｄページ作成関数の定義
 function init() {
@@ -14,19 +15,16 @@ function init() {
   const axes = new THREE.AxesHelper(18);
   scene.add(axes);
 
-  /* 平面の設定
-  const planeGeometry = new THREE.PlaneGeometry(32, 16);
-  const planeMaterial = new THREE.MeshBasicMaterial({ color: 0x606060});
-  const plane = new THREE.Mesh(planeGeometry, planeMaterial);
-  plane.rotation.x = -0.5 * Math.PI;
-  scene.add(plane);
-  /**/
-
   // 箱1の表示設定
+  const box1 = new THREE.Mesh(
+    new THREE.BoxGeometry(10, 2, 10),
+    new MeshBasicMaterial({color: "lightblue"})
+  );
+  scene.add(box);
 
-  // 箱2の表示設定
+  // 箱2の表示設定 (色は"yellowgreen")
 
-  // 箱3の表示設定
+  // 箱3の表示設定 (色は"orangered")
 
   // 光源の設定
 
@@ -34,9 +32,9 @@ function init() {
   const camera = new THREE.PerspectiveCamera(
     60, window.innerWidth/window.innerHeight, 0.1, 1000);
   camera.position.x = 25;
-  camera.position.y = 15;
-  camera.position.z = 30;
-  camera.lookAt(0, 4, 0);
+  camera.position.y = 5;
+  camera.position.z = 15;
+  camera.lookAt(0, 10, 0);
 
   // レンダラの設定
   const renderer = new THREE.WebGLRenderer();
