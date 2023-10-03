@@ -33,7 +33,6 @@ function init() {
   camera.position.x = 25;
   camera.position.y = 5;
   camera.position.z = 15;
-  camera.lookAt(0, 10, 0);
 
   // レンダラの設定
   const renderer = new THREE.WebGLRenderer();
